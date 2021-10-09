@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    /**
+     * @param {number} x
+     * @return {number}
+     */
+    var reverse = function(x) {
+
+        let nunstr = String(x<0?-x:x)
+        let newStr = nunstr.split("").reverse().join("")
+        let newNum = parseInt(x<0?'-'+newStr:newStr)
+
+        if(newNum>(2**31)-1 || newNum<-(2**31)){
+            return 0
+        }else{
+            return newNum
+        }
+
+
+
+    };
+</script>
+</body>
+</html>
